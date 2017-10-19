@@ -18,13 +18,21 @@ public class MybatisTest {
 	@Autowired
 	private CategoryMapper categoryMapper;
 
-	@Test
+	/*@Test
 	public void testAdd() {
-		Category category = new Category();
-		category.setName("new Category");
-		categoryMapper.add(category);
-	}
+		for(int i=0;i<100;i++){
+			Category category = new Category();
+			category.setName("new Category");
+			categoryMapper.add(category);
+		}
+		
+	}*/
 
+	@Test
+	public void testTotal(){
+		int total = categoryMapper.total();
+		System.out.println(total);
+	}
 	@Test
 	public void testList() {
 		System.out.println(categoryMapper);
